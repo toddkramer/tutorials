@@ -1,0 +1,18 @@
+PODS:
+  - Alamofire (3.2.0)
+  - AlamofireImage (2.3.1):
+    - Alamofire (~> 3.1)
+  - AsyncDisplayKit (1.9.6):
+    - AsyncDisplayKit/ASDealloc2MainObject (= 1.9.6)
+  - AsyncDisplayKit/ASDealloc2MainObject (1.9.6)
+
+DEPENDENCIES:
+  - AlamofireImage (~> 2.0)
+  - AsyncDisplayKit
+
+SPEC CHECKSUMS:
+  Alamofire: 4da478599fccddff361205c8929333d7fe18dceb
+  AlamofireImage: 8256f88835f58257a76ea2738d3773be5057f7ed
+  AsyncDisplayKit: 56b2845c87345324cb3af3c43d3c3a4556a275be
+
+COCOAPODS: 0.39.0
