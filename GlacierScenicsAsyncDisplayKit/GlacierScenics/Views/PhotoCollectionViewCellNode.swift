@@ -47,13 +47,14 @@ class PhotoCollectionViewCellNode: ASCellNode {
     }
 
     func loadingIndicatorCenter() -> CGPoint {
-        let size: CGSize = loadingIndicator.frame.size
-        let centerX = nodeSize.width / 2 - size.width / 2
-        let centerY = nodeSize.height / 2 - size.height / 2
+        let centerX = nodeSize.width / 2
+        let centerY = nodeSize.height / 2 - captionContainerFrame().height / 2
         return CGPoint(x: centerX, y: centerY)
     }
 
     func configureImageNode() {
+        let manager = PhotosDataManager.sharedManager
+        imageNode = ASNetworkImageNode(cache: manager, downloader: manager)
         imageNode.frame = viewFrame()
         imageNode.delegate = self
         imageNode.URL = NSURL(string: glacierScenic.photoURLString)

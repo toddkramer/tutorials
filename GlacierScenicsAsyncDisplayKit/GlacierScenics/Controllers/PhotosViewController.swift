@@ -41,7 +41,11 @@ class PhotosViewController: UIViewController {
         let layout = UICollectionViewFlowLayout()
         layout.minimumInteritemSpacing = 1
         layout.minimumLineSpacing = 1
-        collectionView = ASCollectionView(frame: view.frame, collectionViewLayout: layout)
+        var frame = view.frame
+        if let navigationBar = navigationController?.navigationBar {
+            frame.size.height -= navigationBar.frame.height
+        }
+        collectionView = ASCollectionView(frame: frame, collectionViewLayout: layout)
         collectionView.backgroundColor = UIColor.blackColor()
         collectionView.asyncDataSource = photosDataSource
         view.addSubview(collectionView)
