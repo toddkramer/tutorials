@@ -38,7 +38,7 @@ class PhotoCollectionViewCell: UICollectionViewCell {
     }
 
     func loadImage() {
-        Alamofire.request(.GET, glacierScenic.photoURLString).responseImage { (response) -> Void in
+        request = Alamofire.request(.GET, glacierScenic.photoURLString).responseImage { (response) -> Void in
             guard let image = response.result.value else { return }
             self.populateCell(image)
             PhotosDataManager.sharedManager.cacheImage(self.glacierScenic, image: image)
