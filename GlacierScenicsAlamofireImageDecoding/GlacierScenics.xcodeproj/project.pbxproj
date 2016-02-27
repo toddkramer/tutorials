@@ -1,0 +1,656 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9BE110521C5D27470065964E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE110511C5D27470065964E /* AppDelegate.swift */; };
+		9BE110571C5D27470065964E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BE110551C5D27470065964E /* Main.storyboard */; };
+		9BE110591C5D27470065964E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BE110581C5D27470065964E /* Assets.xcassets */; };
+		9BE1105C1C5D27470065964E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BE1105A1C5D27470065964E /* LaunchScreen.storyboard */; };
+		9BE110671C5D27470065964E /* GlacierScenicsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE110661C5D27470065964E /* GlacierScenicsTests.swift */; };
+		9BE110721C5D27470065964E /* GlacierScenicsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE110711C5D27470065964E /* GlacierScenicsUITests.swift */; };
+		9BE110821C5D277E0065964E /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE110801C5D277E0065964E /* PhotoCollectionViewCell.swift */; };
+		9BE110831C5D277E0065964E /* PhotoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BE110811C5D277E0065964E /* PhotoCollectionViewCell.xib */; };
+		9BE110861C5D2AB50065964E /* GlacierScenics.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9BE110851C5D2AB50065964E /* GlacierScenics.plist */; };
+		9BE110891C5D35060065964E /* PhotosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE110881C5D35060065964E /* PhotosCollectionViewController.swift */; };
+		9BE1108B1C5D35AF0065964E /* PhotosDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE1108A1C5D35AF0065964E /* PhotosDataManager.swift */; };
+		9BE1108D1C5D35E60065964E /* GlacierScenic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE1108C1C5D35E60065964E /* GlacierScenic.swift */; };
+		9BEC81DF1C824ED9001F2A50 /* ImageDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEC81DE1C824ED9001F2A50 /* ImageDecoder.swift */; };
+		9BEC81E11C8256F0001F2A50 /* ImageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEC81E01C8256F0001F2A50 /* ImageRequest.swift */; };
+		9BEC81E31C825CD8001F2A50 /* DecodeOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEC81E21C825CD8001F2A50 /* DecodeOperation.swift */; };
+		D61045D311ECDE824E031DF0 /* Pods_GlacierScenics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76C1785A7BFB28C444BD01B7 /* Pods_GlacierScenics.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9BE110631C5D27470065964E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9BE110461C5D27470065964E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9BE1104D1C5D27470065964E;
+			remoteInfo = GlacierScenics;
+		};
+		9BE1106E1C5D27470065964E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9BE110461C5D27470065964E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9BE1104D1C5D27470065964E;
+			remoteInfo = GlacierScenics;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		76C1785A7BFB28C444BD01B7 /* Pods_GlacierScenics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GlacierScenics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BE1104E1C5D27470065964E /* GlacierScenics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GlacierScenics.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BE110511C5D27470065964E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9BE110561C5D27470065964E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9BE110581C5D27470065964E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9BE1105B1C5D27470065964E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9BE1105D1C5D27470065964E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9BE110621C5D27470065964E /* GlacierScenicsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GlacierScenicsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BE110661C5D27470065964E /* GlacierScenicsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlacierScenicsTests.swift; sourceTree = "<group>"; };
+		9BE110681C5D27470065964E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9BE1106D1C5D27470065964E /* GlacierScenicsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GlacierScenicsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BE110711C5D27470065964E /* GlacierScenicsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlacierScenicsUITests.swift; sourceTree = "<group>"; };
+		9BE110731C5D27470065964E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9BE110801C5D277E0065964E /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoCollectionViewCell.swift; path = Views/PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		9BE110811C5D277E0065964E /* PhotoCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PhotoCollectionViewCell.xib; path = Views/PhotoCollectionViewCell.xib; sourceTree = "<group>"; };
+		9BE110851C5D2AB50065964E /* GlacierScenics.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GlacierScenics.plist; sourceTree = "<group>"; };
+		9BE110881C5D35060065964E /* PhotosCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotosCollectionViewController.swift; path = Controllers/PhotosCollectionViewController.swift; sourceTree = "<group>"; };
+		9BE1108A1C5D35AF0065964E /* PhotosDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosDataManager.swift; sourceTree = "<group>"; };
+		9BE1108C1C5D35E60065964E /* GlacierScenic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlacierScenic.swift; sourceTree = "<group>"; };
+		9BEC81DE1C824ED9001F2A50 /* ImageDecoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageDecoder.swift; path = Utilities/ImageDecoder.swift; sourceTree = "<group>"; };
+		9BEC81E01C8256F0001F2A50 /* ImageRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageRequest.swift; path = Utilities/ImageRequest.swift; sourceTree = "<group>"; };
+		9BEC81E21C825CD8001F2A50 /* DecodeOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DecodeOperation.swift; path = Utilities/DecodeOperation.swift; sourceTree = "<group>"; };
+		BDB054FDA819F83814860329 /* Pods-GlacierScenics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GlacierScenics.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GlacierScenics/Pods-GlacierScenics.debug.xcconfig"; sourceTree = "<group>"; };
+		FDEB989FB3CAE5EA9BB7716D /* Pods-GlacierScenics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GlacierScenics.release.xcconfig"; path = "Pods/Target Support Files/Pods-GlacierScenics/Pods-GlacierScenics.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9BE1104B1C5D27470065964E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D61045D311ECDE824E031DF0 /* Pods_GlacierScenics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BE1105F1C5D27470065964E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BE1106A1C5D27470065964E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8A54F6A2A9737AAFED021E03 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BDB054FDA819F83814860329 /* Pods-GlacierScenics.debug.xcconfig */,
+				FDEB989FB3CAE5EA9BB7716D /* Pods-GlacierScenics.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8CABEB1468CFCCA27B5E2FEE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				76C1785A7BFB28C444BD01B7 /* Pods_GlacierScenics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9BE110451C5D27470065964E = {
+			isa = PBXGroup;
+			children = (
+				9BE110501C5D27470065964E /* GlacierScenics */,
+				9BE110651C5D27470065964E /* GlacierScenicsTests */,
+				9BE110701C5D27470065964E /* GlacierScenicsUITests */,
+				9BE1104F1C5D27470065964E /* Products */,
+				8A54F6A2A9737AAFED021E03 /* Pods */,
+				8CABEB1468CFCCA27B5E2FEE /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		9BE1104F1C5D27470065964E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9BE1104E1C5D27470065964E /* GlacierScenics.app */,
+				9BE110621C5D27470065964E /* GlacierScenicsTests.xctest */,
+				9BE1106D1C5D27470065964E /* GlacierScenicsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9BE110501C5D27470065964E /* GlacierScenics */ = {
+			isa = PBXGroup;
+			children = (
+				9BEC81DD1C824EB8001F2A50 /* Utilities */,
+				9BE110871C5D34F10065964E /* Controllers */,
+				9BE110841C5D2AB50065964E /* Data */,
+				9BE1107F1C5D27610065964E /* Views */,
+				9BE110511C5D27470065964E /* AppDelegate.swift */,
+				9BE110551C5D27470065964E /* Main.storyboard */,
+				9BE110581C5D27470065964E /* Assets.xcassets */,
+				9BE1105A1C5D27470065964E /* LaunchScreen.storyboard */,
+				9BE1105D1C5D27470065964E /* Info.plist */,
+			);
+			path = GlacierScenics;
+			sourceTree = "<group>";
+		};
+		9BE110651C5D27470065964E /* GlacierScenicsTests */ = {
+			isa = PBXGroup;
+			children = (
+				9BE110661C5D27470065964E /* GlacierScenicsTests.swift */,
+				9BE110681C5D27470065964E /* Info.plist */,
+			);
+			path = GlacierScenicsTests;
+			sourceTree = "<group>";
+		};
+		9BE110701C5D27470065964E /* GlacierScenicsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9BE110711C5D27470065964E /* GlacierScenicsUITests.swift */,
+				9BE110731C5D27470065964E /* Info.plist */,
+			);
+			path = GlacierScenicsUITests;
+			sourceTree = "<group>";
+		};
+		9BE1107F1C5D27610065964E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9BE110801C5D277E0065964E /* PhotoCollectionViewCell.swift */,
+				9BE110811C5D277E0065964E /* PhotoCollectionViewCell.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		9BE110841C5D2AB50065964E /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				9BE110851C5D2AB50065964E /* GlacierScenics.plist */,
+				9BE1108A1C5D35AF0065964E /* PhotosDataManager.swift */,
+				9BE1108C1C5D35E60065964E /* GlacierScenic.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		9BE110871C5D34F10065964E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9BE110881C5D35060065964E /* PhotosCollectionViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		9BEC81DD1C824EB8001F2A50 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				9BEC81DE1C824ED9001F2A50 /* ImageDecoder.swift */,
+				9BEC81E01C8256F0001F2A50 /* ImageRequest.swift */,
+				9BEC81E21C825CD8001F2A50 /* DecodeOperation.swift */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9BE1104D1C5D27470065964E /* GlacierScenics */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9BE110761C5D27470065964E /* Build configuration list for PBXNativeTarget "GlacierScenics" */;
+			buildPhases = (
+				C59987D1CC3FCCDBB1DB3E14 /* Check Pods Manifest.lock */,
+				9BE1104A1C5D27470065964E /* Sources */,
+				9BE1104B1C5D27470065964E /* Frameworks */,
+				9BE1104C1C5D27470065964E /* Resources */,
+				E22C21CC53E8B191197B95F4 /* Embed Pods Frameworks */,
+				F4FE514E6FC297889A1A6D1E /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GlacierScenics;
+			productName = GlacierScenics;
+			productReference = 9BE1104E1C5D27470065964E /* GlacierScenics.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9BE110611C5D27470065964E /* GlacierScenicsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9BE110791C5D27470065964E /* Build configuration list for PBXNativeTarget "GlacierScenicsTests" */;
+			buildPhases = (
+				9BE1105E1C5D27470065964E /* Sources */,
+				9BE1105F1C5D27470065964E /* Frameworks */,
+				9BE110601C5D27470065964E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9BE110641C5D27470065964E /* PBXTargetDependency */,
+			);
+			name = GlacierScenicsTests;
+			productName = GlacierScenicsTests;
+			productReference = 9BE110621C5D27470065964E /* GlacierScenicsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9BE1106C1C5D27470065964E /* GlacierScenicsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9BE1107C1C5D27470065964E /* Build configuration list for PBXNativeTarget "GlacierScenicsUITests" */;
+			buildPhases = (
+				9BE110691C5D27470065964E /* Sources */,
+				9BE1106A1C5D27470065964E /* Frameworks */,
+				9BE1106B1C5D27470065964E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9BE1106F1C5D27470065964E /* PBXTargetDependency */,
+			);
+			name = GlacierScenicsUITests;
+			productName = GlacierScenicsUITests;
+			productReference = 9BE1106D1C5D27470065964E /* GlacierScenicsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9BE110461C5D27470065964E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Todd Kramer";
+				TargetAttributes = {
+					9BE1104D1C5D27470065964E = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = R3JQ32F9MD;
+					};
+					9BE110611C5D27470065964E = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 9BE1104D1C5D27470065964E;
+					};
+					9BE1106C1C5D27470065964E = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 9BE1104D1C5D27470065964E;
+					};
+				};
+			};
+			buildConfigurationList = 9BE110491C5D27470065964E /* Build configuration list for PBXProject "GlacierScenics" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9BE110451C5D27470065964E;
+			productRefGroup = 9BE1104F1C5D27470065964E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9BE1104D1C5D27470065964E /* GlacierScenics */,
+				9BE110611C5D27470065964E /* GlacierScenicsTests */,
+				9BE1106C1C5D27470065964E /* GlacierScenicsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9BE1104C1C5D27470065964E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BE1105C1C5D27470065964E /* LaunchScreen.storyboard in Resources */,
+				9BE110831C5D277E0065964E /* PhotoCollectionViewCell.xib in Resources */,
+				9BE110591C5D27470065964E /* Assets.xcassets in Resources */,
+				9BE110571C5D27470065964E /* Main.storyboard in Resources */,
+				9BE110861C5D2AB50065964E /* GlacierScenics.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BE110601C5D27470065964E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BE1106B1C5D27470065964E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C59987D1CC3FCCDBB1DB3E14 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E22C21CC53E8B191197B95F4 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GlacierScenics/Pods-GlacierScenics-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F4FE514E6FC297889A1A6D1E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GlacierScenics/Pods-GlacierScenics-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9BE1104A1C5D27470065964E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BE1108B1C5D35AF0065964E /* PhotosDataManager.swift in Sources */,
+				9BE110891C5D35060065964E /* PhotosCollectionViewController.swift in Sources */,
+				9BEC81DF1C824ED9001F2A50 /* ImageDecoder.swift in Sources */,
+				9BE1108D1C5D35E60065964E /* GlacierScenic.swift in Sources */,
+				9BE110521C5D27470065964E /* AppDelegate.swift in Sources */,
+				9BEC81E31C825CD8001F2A50 /* DecodeOperation.swift in Sources */,
+				9BEC81E11C8256F0001F2A50 /* ImageRequest.swift in Sources */,
+				9BE110821C5D277E0065964E /* PhotoCollectionViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BE1105E1C5D27470065964E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BE110671C5D27470065964E /* GlacierScenicsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BE110691C5D27470065964E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BE110721C5D27470065964E /* GlacierScenicsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9BE110641C5D27470065964E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9BE1104D1C5D27470065964E /* GlacierScenics */;
+			targetProxy = 9BE110631C5D27470065964E /* PBXContainerItemProxy */;
+		};
+		9BE1106F1C5D27470065964E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9BE1104D1C5D27470065964E /* GlacierScenics */;
+			targetProxy = 9BE1106E1C5D27470065964E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9BE110551C5D27470065964E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9BE110561C5D27470065964E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9BE1105A1C5D27470065964E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9BE1105B1C5D27470065964E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9BE110741C5D27470065964E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9BE110751C5D27470065964E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9BE110771C5D27470065964E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDB054FDA819F83814860329 /* Pods-GlacierScenics.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = GlacierScenics/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.toddkramer.GlacierScenics;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		9BE110781C5D27470065964E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FDEB989FB3CAE5EA9BB7716D /* Pods-GlacierScenics.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = GlacierScenics/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.toddkramer.GlacierScenics;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		9BE1107A1C5D27470065964E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = GlacierScenicsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = toddkramer.GlacierScenicsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GlacierScenics.app/GlacierScenics";
+			};
+			name = Debug;
+		};
+		9BE1107B1C5D27470065964E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = GlacierScenicsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = toddkramer.GlacierScenicsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GlacierScenics.app/GlacierScenics";
+			};
+			name = Release;
+		};
+		9BE1107D1C5D27470065964E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = GlacierScenicsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = toddkramer.GlacierScenicsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = GlacierScenics;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		9BE1107E1C5D27470065964E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = GlacierScenicsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = toddkramer.GlacierScenicsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = GlacierScenics;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9BE110491C5D27470065964E /* Build configuration list for PBXProject "GlacierScenics" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BE110741C5D27470065964E /* Debug */,
+				9BE110751C5D27470065964E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9BE110761C5D27470065964E /* Build configuration list for PBXNativeTarget "GlacierScenics" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BE110771C5D27470065964E /* Debug */,
+				9BE110781C5D27470065964E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9BE110791C5D27470065964E /* Build configuration list for PBXNativeTarget "GlacierScenicsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BE1107A1C5D27470065964E /* Debug */,
+				9BE1107B1C5D27470065964E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9BE1107C1C5D27470065964E /* Build configuration list for PBXNativeTarget "GlacierScenicsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BE1107D1C5D27470065964E /* Debug */,
+				9BE1107E1C5D27470065964E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9BE110461C5D27470065964E /* Project object */;
+}
