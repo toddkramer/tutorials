@@ -58,6 +58,7 @@ class PhotoCollectionViewCellNode: ASCellNode {
         imageNode.frame = viewFrame()
         imageNode.delegate = self
         imageNode.URL = NSURL(string: glacierScenic.photoURLString)
+        imageNode.layerBacked = true
         addSubnode(imageNode)
     }
 
@@ -75,6 +76,7 @@ class PhotoCollectionViewCellNode: ASCellNode {
     func configureCaptionContainerNode() {
         captionContainerNode.frame = captionContainerFrame()
         captionContainerNode.backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.5)
+        captionContainerNode.layerBacked = true
         addSubnode(captionContainerNode)
     }
 
@@ -84,7 +86,7 @@ class PhotoCollectionViewCellNode: ASCellNode {
         let labelNodeHeight: CGFloat = captionLabelNode.attributedString!.boundingRectWithSize(constrainedSize, options: .UsesFontLeading, context: nil).height
         let labelNodeYValue = captionContainerFrame().height / 2 - labelNodeHeight / 2
         captionLabelNode.frame = CGRect(x: 0, y: labelNodeYValue, width: nodeSize.width, height: labelNodeHeight)
-        captionContainerNode.addSubnode(captionLabelNode)
+        captionContainerNode.layer.addSublayer(captionLabelNode.layer)
     }
 
     func captionContainerFrame() -> CGRect {
