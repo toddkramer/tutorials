@@ -53,15 +53,17 @@ class PhotosDataManager {
                     completion(nil)
                     return
                 }
-                let decodeOperation = self.decodeImage(image, completion: completion)
+                let decodeOperation = self.decodeImage(image, completion: { (image) -> Void in
+                    completion(image)
+                    self.cacheImage(image, urlString: urlString)
+                })
                 imageRequest.decodeOperation = decodeOperation
-                self.cacheImage(image, urlString: urlString)
             }
         )
         return imageRequest
     }
 
-    func decodeImage(image: UIImage, completion: (UIImage? -> Void)) -> DecodeOperation {
+    func decodeImage(image: UIImage, completion: (UIImage -> Void)) -> DecodeOperation {
         let decodeOperation = DecodeOperation(image: image, decoder: self.decoder, completion: completion)
         self.decoder.queue.addOperation(decodeOperation)
         return decodeOperation

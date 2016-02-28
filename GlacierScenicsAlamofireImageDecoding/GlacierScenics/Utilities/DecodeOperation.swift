@@ -12,9 +12,9 @@ class DecodeOperation: NSOperation {
 
     let image: UIImage
     let decoder: ImageDecoder
-    let completion: (UIImage? -> Void)
+    let completion: (UIImage -> Void)
 
-    init(image: UIImage, decoder: ImageDecoder, completion: (UIImage? -> Void)) {
+    init(image: UIImage, decoder: ImageDecoder, completion: (UIImage -> Void)) {
         self.image = image
         self.decoder = decoder
         self.completion = completion

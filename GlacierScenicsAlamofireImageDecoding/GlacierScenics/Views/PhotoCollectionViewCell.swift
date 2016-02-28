@@ -44,7 +44,8 @@ class PhotoCollectionViewCell: UICollectionViewCell {
     }
 
     func downloadImage() {
-        request = PhotosDataManager.sharedManager.getNetworkImage(glacierScenic.photoURLString) { (image) -> Void in
+        let urlString = glacierScenic.photoURLString
+        request = PhotosDataManager.sharedManager.getNetworkImage(urlString) { (image) -> Void in
             guard let image = image else { return }
             self.populateCell(image)
         }

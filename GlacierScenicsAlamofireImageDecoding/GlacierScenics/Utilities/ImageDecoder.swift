@@ -27,7 +27,7 @@ class ImageDecoder {
 
     func decode(image: UIImage, targetSize: CGSize = MaxImageSize, contentMode: ContentMode = DefaultContentMode) -> UIImage {
         let size = decodedSize(image.CGImage, targetSize: targetSize, contentMode: contentMode)
-        guard let context = CGBitmapContextCreate(nil, Int(size.width), Int(size.height), 8, 0, CGColorSpaceCreateDeviceRGB(), CGImageAlphaInfo.PremultipliedLast.rawValue) else { return image }
+        guard let context = CGBitmapContextCreate(nil, Int(size.width), Int(size.height), 8, 0, CGColorSpaceCreateDeviceRGB(), CGImageAlphaInfo.None.rawValue) else { return image }
         CGContextDrawImage(context, CGRect(origin: CGPointZero, size: size), image.CGImage)
         guard let decodedImage = CGBitmapContextCreateImage(context) else { return image }
         return UIImage(CGImage: decodedImage, scale: image.scale, orientation: image.imageOrientation)
