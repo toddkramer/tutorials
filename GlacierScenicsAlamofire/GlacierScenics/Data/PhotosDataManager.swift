@@ -19,6 +19,8 @@ class PhotosDataManager {
         memoryCapacity: 100 * 1024 * 1024,
         preferredMemoryUsageAfterPurge: 60 * 1024 * 1024
     )
+
+    //MARK: - Read Data
     
     func allPhotos() -> [GlacierScenic] {
         if !photos.isEmpty { return photos }
@@ -38,13 +40,15 @@ class PhotosDataManager {
 
     //MARK: - Image Downloading
     
-    func getNetworkImage(urlString: String, completion: (UIImage? -> Void)) -> (Request) {
+    func getNetworkImage(urlString: String, completion: (UIImage -> Void)) -> (Request) {
         return Alamofire.request(.GET, urlString).responseImage { (response) -> Void in
             guard let image = response.result.value else { return }
             completion(image)
             self.cacheImage(image, urlString: urlString)
         }
     }
+
+    //MARK: = Image Caching
 
     func cacheImage(image: Image, urlString: String) {
         photoCache.addImage(image, withIdentifier: urlString)

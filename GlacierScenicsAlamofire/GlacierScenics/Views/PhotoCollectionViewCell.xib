@@ -20,54 +20,34 @@
                     <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="az0-mg-b66">
                         <rect key="frame" x="82" y="81" width="37" height="37"/>
                     </activityIndicatorView>
-                    <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y0r-Ji-Wy3">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oUm-ND-f5a">
                         <rect key="frame" x="0.0" y="165" width="200" height="35"/>
-                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="qYb-wM-ClE">
-                            <rect key="frame" x="0.0" y="0.0" width="200" height="35"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GfV-Hx-nT2">
-                                    <rect key="frame" x="0.0" y="0.0" width="200" height="35"/>
-                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="35" id="sws-pM-Tf3"/>
-                                    </constraints>
-                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                            </subviews>
-                            <constraints>
-                                <constraint firstItem="GfV-Hx-nT2" firstAttribute="top" secondItem="qYb-wM-ClE" secondAttribute="top" id="Lp5-fr-3Qw"/>
-                                <constraint firstItem="GfV-Hx-nT2" firstAttribute="leading" secondItem="qYb-wM-ClE" secondAttribute="leading" id="gcq-PQ-cjL"/>
-                                <constraint firstAttribute="bottom" secondItem="GfV-Hx-nT2" secondAttribute="bottom" id="rWc-N5-9Ik"/>
-                                <constraint firstAttribute="trailing" secondItem="GfV-Hx-nT2" secondAttribute="trailing" id="u1g-Bm-Dsg"/>
-                            </constraints>
-                        </view>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="35" id="EWW-JV-PQA"/>
+                            <constraint firstAttribute="height" constant="35" id="F3E-8n-7yA"/>
                         </constraints>
-                        <blurEffect style="light"/>
-                    </visualEffectView>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
             <color key="backgroundColor" white="0.10000000000000001" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="uwq-wM-oSn" firstAttribute="leading" secondItem="ofP-UN-lj7" secondAttribute="leading" id="4EW-r2-opu"/>
+                <constraint firstItem="oUm-ND-f5a" firstAttribute="leading" secondItem="ofP-UN-lj7" secondAttribute="leading" id="57V-Gg-AKB"/>
                 <constraint firstItem="uwq-wM-oSn" firstAttribute="top" secondItem="ofP-UN-lj7" secondAttribute="top" id="5qZ-Vr-OEh"/>
                 <constraint firstAttribute="bottom" secondItem="uwq-wM-oSn" secondAttribute="bottom" id="GyU-qm-hTk"/>
-                <constraint firstAttribute="trailing" secondItem="y0r-Ji-Wy3" secondAttribute="trailing" id="KNy-2m-vMe"/>
                 <constraint firstAttribute="trailing" secondItem="uwq-wM-oSn" secondAttribute="trailing" id="PkP-PG-YIe"/>
-                <constraint firstAttribute="bottom" secondItem="y0r-Ji-Wy3" secondAttribute="bottom" id="XBf-l5-brx"/>
+                <constraint firstAttribute="trailing" secondItem="oUm-ND-f5a" secondAttribute="trailing" id="VdY-gt-Fdd"/>
                 <constraint firstItem="az0-mg-b66" firstAttribute="centerX" secondItem="ofP-UN-lj7" secondAttribute="centerX" id="XLY-vq-3qL"/>
-                <constraint firstItem="y0r-Ji-Wy3" firstAttribute="leading" secondItem="ofP-UN-lj7" secondAttribute="leading" id="cwY-z1-siE"/>
+                <constraint firstAttribute="bottom" secondItem="oUm-ND-f5a" secondAttribute="bottom" id="rUd-pB-clL"/>
                 <constraint firstItem="az0-mg-b66" firstAttribute="centerY" secondItem="ofP-UN-lj7" secondAttribute="centerY" id="xbF-Er-qhW"/>
             </constraints>
             <size key="customSize" width="200" height="200"/>
             <connections>
-                <outlet property="blurView" destination="y0r-Ji-Wy3" id="5lc-Tc-GZY"/>
-                <outlet property="captionLabel" destination="GfV-Hx-nT2" id="OXN-wk-Pd0"/>
+                <outlet property="captionLabel" destination="oUm-ND-f5a" id="LxP-H7-Eoh"/>
                 <outlet property="imageView" destination="uwq-wM-oSn" id="kUn-ap-FMc"/>
                 <outlet property="loadingIndicator" destination="az0-mg-b66" id="9wY-Ij-Cu3"/>
             </connections>
