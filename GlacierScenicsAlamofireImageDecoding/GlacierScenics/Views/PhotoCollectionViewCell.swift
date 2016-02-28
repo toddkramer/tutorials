@@ -18,7 +18,6 @@ class PhotoCollectionViewCell: UICollectionViewCell {
     @IBOutlet var blurView: UIVisualEffectView!
     
     var request: ImageRequest?
-    var decodeOperation: DecodeOperation?
     var glacierScenic: GlacierScenic!
 
     func configure(glacierScenic: GlacierScenic) {
@@ -30,7 +29,6 @@ class PhotoCollectionViewCell: UICollectionViewCell {
     func reset() {
         imageView.image = nil
         request?.cancel()
-        decodeOperation?.cancel()
         blurView.hidden = true
     }
 
