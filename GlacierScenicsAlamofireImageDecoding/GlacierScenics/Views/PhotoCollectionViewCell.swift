@@ -8,14 +8,12 @@
 
 import UIKit
 import Alamofire
-import AlamofireImage
 
 class PhotoCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var captionLabel: UILabel!
     @IBOutlet var loadingIndicator: UIActivityIndicatorView!
-    @IBOutlet var blurView: UIVisualEffectView!
     
     var request: ImageRequest?
     var glacierScenic: GlacierScenic!
@@ -29,22 +27,21 @@ class PhotoCollectionViewCell: UICollectionViewCell {
     func reset() {
         imageView.image = nil
         request?.cancel()
-        blurView.hidden = true
+        captionLabel.hidden = true
     }
 
     func loadImage() {
         if let image = PhotosDataManager.sharedManager.cachedImage(glacierScenic.photoURLString) {
-            self.populateCell(image)
+            populateCell(image)
             return
         }
-        loadingIndicator.startAnimating()
         downloadImage()
     }
 
     func downloadImage() {
+        loadingIndicator.startAnimating()
         let urlString = glacierScenic.photoURLString
-        request = PhotosDataManager.sharedManager.getNetworkImage(urlString) { (image) -> Void in
-            guard let image = image else { return }
+        request = PhotosDataManager.sharedManager.getNetworkImage(urlString) { image in
             self.populateCell(image)
         }
     }
@@ -53,7 +50,7 @@ class PhotoCollectionViewCell: UICollectionViewCell {
         loadingIndicator.stopAnimating()
         imageView.image = image
         captionLabel.text = glacierScenic.name
-        blurView.hidden = false
+        captionLabel.hidden = false
     }
 
 }

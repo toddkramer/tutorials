@@ -41,7 +41,7 @@ class PhotosDataManager {
 
     //MARK: - Image Downloading
     
-    func getNetworkImage(urlString: String, completion: (UIImage? -> Void)) -> (ImageRequest) {
+    func getNetworkImage(urlString: String, completion: (UIImage -> Void)) -> (ImageRequest) {
         let queue = decoder.queue.underlyingQueue
         let request = Alamofire.request(.GET, urlString)
         let imageRequest = ImageRequest(request: request)
@@ -50,13 +50,12 @@ class PhotosDataManager {
             responseSerializer: Request.imageResponseSerializer(),
             completionHandler: { response in
                 guard let image = response.result.value else {
-                    completion(nil)
                     return
                 }
-                let decodeOperation = self.decodeImage(image, completion: { (image) -> Void in
+                let decodeOperation = self.decodeImage(image) { image in
                     completion(image)
                     self.cacheImage(image, urlString: urlString)
-                })
+                }
                 imageRequest.decodeOperation = decodeOperation
             }
         )

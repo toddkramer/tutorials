@@ -31,7 +31,7 @@ class DecodeOperation: NSOperation {
             return
         }
 
-        NSOperationQueue.mainQueue().addOperationWithBlock { () -> Void in
+        NSOperationQueue.mainQueue().addOperationWithBlock {
             self.completion(decodedImage)
         }
     }
