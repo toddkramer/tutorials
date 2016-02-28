@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 import AlamofireImage
 
 class PhotosDataManager {
@@ -30,17 +31,27 @@ class PhotosDataManager {
         }
         return photos
     }
-
-    func cacheImage(glacierScenic: GlacierScenic, image: Image) {
-        photoCache.addImage(image, withIdentifier: glacierScenic.name)
-    }
-
-    func cachedImage(glacierScenic: GlacierScenic) -> Image? {
-        return photoCache.imageWithIdentifier(glacierScenic.name)
-    }
     
     func dataPath() -> String {
         return NSBundle.mainBundle().pathForResource("GlacierScenics", ofType: "plist")!
+    }
+
+    //MARK: - Image Downloading
+    
+    func getNetworkImage(urlString: String, completion: (UIImage? -> Void)) -> (Request) {
+        return Alamofire.request(.GET, urlString).responseImage { (response) -> Void in
+            guard let image = response.result.value else { return }
+            completion(image)
+            self.cacheImage(image, urlString: urlString)
+        }
+    }
+
+    func cacheImage(image: Image, urlString: String) {
+        photoCache.addImage(image, withIdentifier: urlString)
+    }
+    
+    func cachedImage(urlString: String) -> Image? {
+        return photoCache.imageWithIdentifier(urlString)
     }
     
 }

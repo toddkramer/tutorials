@@ -23,10 +23,6 @@ class PhotoCollectionViewCell: UICollectionViewCell {
     func configure(glacierScenic: GlacierScenic) {
         self.glacierScenic = glacierScenic
         reset()
-        if let image = PhotosDataManager.sharedManager.cachedImage(glacierScenic) {
-            populateCell(image)
-            return
-        }
         loadImage()
     }
 
@@ -34,15 +30,22 @@ class PhotoCollectionViewCell: UICollectionViewCell {
         imageView.image = nil
         request?.cancel()
         blurView.hidden = true
-        loadingIndicator.startAnimating()
     }
 
     func loadImage() {
-        request = Alamofire.request(.GET, glacierScenic.photoURLString).responseImage { (response) -> Void in
-            guard let image = response.result.value else { return }
-            self.populateCell(image)
-            PhotosDataManager.sharedManager.cacheImage(self.glacierScenic, image: image)
+        if let image = PhotosDataManager.sharedManager.cachedImage(glacierScenic.photoURLString) {
+            populateCell(image)
+            return
         }
+        loadingIndicator.startAnimating()
+        downloadImage()
+    }
+
+    func downloadImage() {
+        request = PhotosDataManager.sharedManager.getNetworkImage(glacierScenic.photoURLString, completion: { (image) -> Void in
+            guard let image = image else { return }
+            self.populateCell(image)
+        })
     }
 
     func populateCell(image: UIImage) {
