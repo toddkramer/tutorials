@@ -40,9 +40,10 @@ class PhotoCollectionViewCell: UICollectionViewCell {
 
     func downloadImage() {
         loadingIndicator.startAnimating()
-        request = PhotosDataManager.sharedManager.getNetworkImage(glacierScenic.photoURLString, completion: { image in
+        let urlString = glacierScenic.photoURLString
+        request = PhotosDataManager.sharedManager.getNetworkImage(urlString) { image in
             self.populateCell(image)
-        })
+        }
     }
 
     func populateCell(image: UIImage) {
