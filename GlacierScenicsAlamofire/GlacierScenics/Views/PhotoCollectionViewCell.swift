@@ -34,7 +34,7 @@ class PhotoCollectionViewCell: UICollectionViewCell {
 
     func loadImage() {
         if let image = photosManager.cachedImage(for: photo.url) {
-            populateCell(image: image)
+            populate(with: image)
             return
         }
         downloadImage()
@@ -43,11 +43,11 @@ class PhotoCollectionViewCell: UICollectionViewCell {
     func downloadImage() {
         loadingIndicator.startAnimating()
         request = photosManager.retrieveImage(for: photo.url) { image in
-            self.populateCell(image: image)
+            self.populate(with: image)
         }
     }
 
-    func populateCell(image: UIImage) {
+    func populate(with image: UIImage) {
         loadingIndicator.stopAnimating()
         imageView.image = image
         captionLabel.text = photo.name
