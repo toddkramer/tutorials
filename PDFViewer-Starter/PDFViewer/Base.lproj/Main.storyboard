@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sKh-cY-rNZ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--PDFViewer-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PDFViewer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MJI-Ei-Wrb" customClass="PDFView">
+                                <rect key="frame" x="80" y="0.0" width="295" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kse-f4-iqJ" customClass="PDFThumbnailView">
+                                <rect key="frame" x="0.0" y="0.0" width="80" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="wgi-mx-vif"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="kse-f4-iqJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7o3-hM-u4t"/>
+                            <constraint firstItem="MJI-Ei-Wrb" firstAttribute="leading" secondItem="kse-f4-iqJ" secondAttribute="trailing" id="Gsj-qt-AeV"/>
+                            <constraint firstItem="MJI-Ei-Wrb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="LH1-RR-EZg"/>
+                            <constraint firstItem="kse-f4-iqJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="V1I-Ss-in4"/>
+                            <constraint firstItem="MJI-Ei-Wrb" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="gWX-Hg-cI9"/>
+                            <constraint firstItem="MJI-Ei-Wrb" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="jrA-ZK-QuM"/>
+                            <constraint firstItem="kse-f4-iqJ" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="n3O-6g-Las"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="PDFViewer" id="hlZ-Fe-3gi">
+                        <leftBarButtonItems>
+                            <barButtonItem title="Sidebar" id="YbC-eA-Drz">
+                                <connections>
+                                    <action selector="sidebarTapped:" destination="BYZ-38-t0r" id="ofC-52-Q6p"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Reset" id="35p-bI-9sw">
+                                <connections>
+                                    <action selector="resetTapped:" destination="BYZ-38-t0r" id="Sdm-W8-47s"/>
+                                </connections>
+                            </barButtonItem>
+                        </leftBarButtonItems>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Next" id="nAv-yn-oxI">
+                                <connections>
+                                    <action selector="nextTapped:" destination="BYZ-38-t0r" id="Vs2-SQ-aI4"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Prev" id="iyF-hc-xYD">
+                                <connections>
+                                    <action selector="previousTapped:" destination="BYZ-38-t0r" id="KyR-cd-2Ch"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="nextButton" destination="nAv-yn-oxI" id="MmF-n3-pbZ"/>
+                        <outlet property="pdfThumbnailView" destination="kse-f4-iqJ" id="ZqN-Ls-ugM"/>
+                        <outlet property="pdfView" destination="MJI-Ei-Wrb" id="9uZ-k4-EgR"/>
+                        <outlet property="previousButton" destination="iyF-hc-xYD" id="x0A-Pv-Mei"/>
+                        <outlet property="sidebarLeadingConstraint" destination="7o3-hM-u4t" id="4g2-Q6-o8P"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="476" y="133.5832083958021"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dbz-5X-cqo">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sKh-cY-rNZ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="o4c-12-2il">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="t2z-vl-kaA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FVq-TD-gp2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-385" y="134"/>
+        </scene>
+    </scenes>
+</document>
