@@ -1,0 +1,17 @@
+[
+   {
+      "id":"1",
+      "name":"Acadia",
+      "location":"Maine"
+   },
+   {
+      "id":"2",
+      "name":"Yosemite",
+      "location":"California"
+   },
+   {
+      "id":"3",
+      "name":"Zion",
+      "location":"Utah"
+   }
+]
