@@ -5,7 +5,7 @@ import Foundation
 struct CoverageReport: Codable {
 
     let lines: Int
-    let coverage: Int
+    let coverage: Double
 
     private enum CodingKeys: String, CodingKey {
         case lines = "coveredLines"
