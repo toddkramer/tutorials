@@ -1,9 +1,5 @@
-//
-//  ExampleClass.swift
-//  ExampleFramework
-//
-//  Created by Todd Kramer on 2/17/18.
-//
+
+//  Copyright © 2018 Todd Kramer. All rights reserved.
 
 import Foundation
 
